@@ -1,3 +1,7 @@
+build
+build/*
+.vscode/*.json
+
 # Prerequisites
 *.d
 
@@ -50,7 +54,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-build
-build/
-.vscode/

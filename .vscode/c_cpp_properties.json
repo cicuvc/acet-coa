@@ -6,7 +6,9 @@
                 "${workspaceFolder}/include/",
                 "/usr/include/"
             ],
-            "defines": [],
+            "defines": [
+                "ARCH=x86_64"
+            ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
             "cppStandard": "c++14",

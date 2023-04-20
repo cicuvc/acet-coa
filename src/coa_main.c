@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "./coa.h"
+#include <coa.h>
 
 typedef struct _promise_info {
     intptr_t next : 48;

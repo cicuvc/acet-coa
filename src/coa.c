@@ -4,7 +4,7 @@
 #include <time.h>
 #include <sys/mman.h>
 
-#include "coa.h"
+#include <coa.h>
 
 #define ptr_align_floor(ptr, size) (typeof(ptr))((((intptr_t)(ptr)) / (size)) * (size))
 #define ptr_align_ceil(ptr, size) (typeof(ptr))((((((intptr_t)(ptr))-1) / (size))+1) * (size))
@@ -233,7 +233,7 @@ void cotask_gerneate_asm(cotask_info *info, cotask_probe *probe, cotask_probe *p
 
     cotask_setprotect(info->proc_yield, COA_JIT_MEMORY_SIZE, 1);
     cotask_setprotect(info->proc_resume, COA_JIT_MEMORY_SIZE, 1);
-    printf("Jit memory (0x%lx, 0x%lx)\n", info->proc_yield, info->proc_resume);
+    printf("Jit memory (0x%p, 0x%p)\n", info->proc_yield, info->proc_resume);
 
 
     coa_jit_compile(info->proc_yield, (char *)cotask_yield_template, probe, probe2, info);

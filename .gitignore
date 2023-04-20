@@ -1,6 +1,7 @@
 build
+.vscode
 build/*
-.vscode/*.json
+.vscode/*
 
 # Prerequisites
 *.d
